@@ -13,7 +13,8 @@ public class ConnectionHandler implements Runnable {
     }
 
     public void run() {
-        List<String> validPaths = List.of("/index.html", "/spring.svg", "?spring.png");
+        List<String> validPaths = List.of("/index.html", "/spring.svg", "/spring.png", "/resources.html",
+                "/styles.css", "/app.js", "/links.html", "/forms.html", "/classic.html", "/events.html", "/events.js");
         String requestLine = null;
         try (BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
              BufferedWriter out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()))
